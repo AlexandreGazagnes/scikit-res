@@ -7,7 +7,7 @@ WORKDIR /app
 # RUN rm bashrc.sh
 
 # RUN python3 -m venv env
-RUN python3 -m pip install scikit-res Ipython
+RUN python3 -m pip install scikit-res IPython
 # RUN python3 -m pip freeze >> pip.freeze
 
 # # Jupyter

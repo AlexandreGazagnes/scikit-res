@@ -9,10 +9,10 @@
 #   jupyter nbconvert --clear-output --inplace $f
 # done
 
-for f in ./*/*.ipynb
-do
-  jupyter nbconvert --clear-output --inplace $f
-done
+# for f in ./*/*.ipynb
+# do
+#   jupyter nbconvert --clear-output --inplace $f
+# done
 
 # for f in ./*/*/*.ipynb
 # do
@@ -35,31 +35,31 @@ done
 #   mv $f $new
 # done
 
-for f in ./*/*.ipynb
-do
-  jupytext --to py:percent $f
-  fn=$(basename $f); #   echo "FN => $fn"
-  new="./gbs/notebooks/"$fn ; #   echo "new => $new"
-  # mv $f $new
-done
+# for f in ./*/*.ipynb
+# do
+#   jupytext --to py:percent $f
+#   fn=$(basename $f); #   echo "FN => $fn"
+#   new="./gbs/notebooks/"$fn ; #   echo "new => $new"
+#   # mv $f $new
+# done
 
 
-for f in ./*/*.ipynb
-do
-  jupytext --to pdf $f
-  fn=$(basename $f); #   echo "FN => $fn"
-  # new="./gbs/notebooks/"$fn ; #   echo "new => $new"
-  # mv $f $new
-done
+# for f in ./*/*.ipynb
+# do
+#   jupytext --to pdf $f
+#   fn=$(basename $f); #   echo "FN => $fn"
+#   # new="./gbs/notebooks/"$fn ; #   echo "new => $new"
+#   # mv $f $new
+# done
 
 ###########################
 # black and flake8
 ###########################
 
 
-.venv/bin/python3 -m isort ./gbs/ ./tests/
+.venv/bin/python3 -m isort ./skres/ ./tests/
 # .venv/bin/python3 -m flake8 .
-.venv/bin/python3 -m black .
+.venv/bin/python3 -m black ./skres/ ./tests/
 
 
 # ###########################
