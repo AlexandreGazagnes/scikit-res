@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scikit-res"
-version = "0.1.0"
+version = "0.1.1"
 description = "Very Basic package to store results of ML models"
 authors = ["AlexandreGazagnes <alex@gazagnes.net>"]
 readme = "README.md"
@@ -22,9 +22,9 @@ ipywidgets = "^8.1.1"
 jupyter-contrib-nbextensions = "^0.7.0"
 nbconvert = "7.14.1"
 black = {extras = ["jupyter"], version = "^23.12.1"}
+ipython = "^8.18.1"
 
 [tool.poetry.group.qa.dependencies]
-ipython = "^8.18.1"
 pytest = "^7.4.4"
 isort = "^5.13.2"
 coverage = "^7.4.0"
