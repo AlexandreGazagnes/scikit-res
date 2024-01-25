@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "skres"
-version = "0.0.14"
+name = "scikit-res"
+version = "0.0.16"
 description = "Very Basic package to store results of ML models"
 authors = ["AlexandreGazagnes <alex@gazagnes.net>"]
 readme = "README.md"
@@ -43,7 +43,6 @@ mkdocs = "1.5.3"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
 
 [tool.black]
 line-length = 79
