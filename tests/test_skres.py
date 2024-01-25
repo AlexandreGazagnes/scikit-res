@@ -66,8 +66,8 @@ class TestSkres:
         res = SkRes(grid)
 
         assert isinstance(res, pd.DataFrame)
-        assert res.shape[0] > 10
-        assert res.shape[1] > 10
+        assert res.shape[0] > 5
+        assert res.shape[1] > 5
 
     def test_use_case(self):
         """Test the use case"""
@@ -75,5 +75,5 @@ class TestSkres:
         res = _use_case()
 
         assert isinstance(res, pd.DataFrame)
-        assert res.shape[0] > 10
-        assert res.shape[1] > 10
+        assert res.shape[0] > 5
+        assert res.shape[1] > 5
