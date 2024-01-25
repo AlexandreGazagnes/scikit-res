@@ -1,4 +1,4 @@
-__version__ = "0.0.16"
+__version__ = "0.1.0"
 
 
 import pandas as pd
@@ -29,8 +29,9 @@ class SkRes(pd.DataFrame):
 
         # drop cols
         res.drop(
-            columns=["std_fit_time", "std_fit_time", "rank_test_score"],
+            columns=["std_fit_time", "std_score_time", "rank_test_score"],
             inplace=True,
+            errors="ignore",
         )
 
         super().__init__(res)
