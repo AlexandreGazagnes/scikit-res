@@ -1,7 +1,7 @@
-FROM python:3.9-bullseye
+FROM python:3.10.12-bullseye
 
 
-WORKDIR /root
+WORKDIR /app
 
 RUN rm -f /etc/localtime  && ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 RUN apt update -y && apt upgrade -y && apt clean -y

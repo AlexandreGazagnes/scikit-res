@@ -1,14 +1,14 @@
 FROM skres:base
 
-WORKDIR /root
+WORKDIR /app
 
-COPY ./utils/bashrc.sh ./
-RUN cat bashrc.sh >> .bashrc
-RUN rm bashrc.sh
+# COPY .utils/bashrc.sh ./
+# RUN cat bashrc.sh >> .bashrc
+# RUN rm bashrc.sh
 
-RUN python3 -m venv env
-RUN env/bin/python3 -m pip install skres Ipython
-RUN env/bin/python3 -m pip freeze >> pip.freeze
+# RUN python3 -m venv env
+RUN python3 -m pip install scikit-res Ipython
+# RUN python3 -m pip freeze >> pip.freeze
 
 # # Jupyter
 # RUN pip install virtualenv
@@ -17,5 +17,5 @@ RUN env/bin/python3 -m pip freeze >> pip.freeze
 
 # RUN pip install skres
 
-RUN env/bin/python3 -c "import pandas; import skres"
+# RUN env/bin/python3 -c "import pandas; from skres import SkRes"
 

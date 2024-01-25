@@ -6,7 +6,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-from skres import SkRes
+from skres import SkRes, _use_case
 
 
 @pytest.fixture
@@ -64,6 +64,15 @@ class TestSkres:
         grid.fit(X, y)
 
         res = SkRes(grid)
+
+        assert isinstance(res, pd.DataFrame)
+        assert res.shape[0] > 10
+        assert res.shape[1] > 10
+
+    def test_use_case(self):
+        """Test the use case"""
+
+        res = _use_case()
 
         assert isinstance(res, pd.DataFrame)
         assert res.shape[0] > 10
